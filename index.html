@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Application</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" type="image/icon">
+  
+  <link rel="stylesheet" href="style.css">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+<body>
+<!--   Nav bar of the website  -->
+  
+  <nav class="navbar" style="background-color: #6bc23c;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="https://aviationbenefits.org/media/166134/climateaction.png"class="nav-logo"><b style="color: white;font-size: 30px;">Climate Action</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#searchbox">Home</a>
+        <a class="nav-link" href="#news_section">Weather news</a>
+        <a class="nav-link" href="#time_line">Satellite image on climate change</a>
+        <a class="nav-link" href="#how_to">How to Stop climate change</a>
+        <a class="nav-link" href="#follow_us">Follow us</a>
+      </div>
+    </div>
+  </div>
+</nav>
+  
+<!--   weather api search bar setup -->
+  
+  <div class="Search_bar_body">
+    <h1>Search for Weather</h1>
+  <input type="text" id="searchbox"/>
+  <h2 id="city"></h2>
+  <h1 id="temp"></h1>
+  <span id="min_max_temp"></span>
+  <h4 id="weather"></h4>
+  <p id="weather_desc"></p>
+  <span id="wind_dir_speed"></span>
+  </div>
+<!-- Dark mode html -->
+   <a onclick="myFunction()">
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqqyo6uMVpLjfqBrZ4r3DlFyGfEWc1L1F7Mg&usqp=CAU" style="border-radius:50%;width: 60px;margin-left: 20px;"></a>
+<!--   Carousel related to climate change -->
+  <div class="carousel_climate_change">
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://imageio.forbes.com/specials-images/imageserve/61b3bd0db47f6aee512afcc1/0x0.jpg?format=jpg&width=1200" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://helios-i.mashable.com/imagery/articles/03tOM6SEiHsxNnYulrzvgT1/hero-image.fill.size_1248x702.v1623388326.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://img.freepik.com/free-photo/trees-grown-dry-cracked-dry-soil-dry-season-global-warming_1150-16286.jpg?w=996&t=st=1678699306~exp=1678699906~hmac=4f51ab7b87e64b4627e3be0f2840069c31fb9c2e84b4b518b4b56914d92a2fd1" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  </div>
+<!-- News of Weather related socal message -->
+  <h1 class="contant-center" id="news_section">News related to Climate change</h1>
+  <div class="newcc_contant">
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="https://cdn.downtoearth.org.in/library/large/2023-03-10/0.46123200_1678441412_istock-1267821745.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sea ice on both poles at record low, finds WMO report</h5>
+        <p class="card-text">Antarctic sea ice cover at record low for 2nd consecutive year; Arctic sea ice extent is also at an all-time minimum.<br>
+        Sea ice levels in Antarctica shrunk to the lowest on record in February for the second consecutive year, according to United Nations meteorological agency. Arctic sea ice extent is also at an all-time minimum.
+          <br/>
+          <a href="https://www.downtoearth.org.in/news/climate-change/sea-ice-on-both-poles-at-record-low-finds-wmo-report-88169" class="a-dec">Read more</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://cdn.downtoearth.org.in/library/large/2023-03-10/0.82849400_1678434453_tree.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">A tonne of fossil carbon isn’t the same as a tonne of new trees: Why offsets can’t save us</h5>
+        <p class="card-text">Avoiding the worst of climate change means stopping the extraction and burning of fossil fuels; offsets will not save us<br/>
+        This week, the Albanese government is attempting to reform the safeguard mechanism to try to make it actually cut emissions from our highest polluting industrial facilities.<br/>
+          <a href="https://www.downtoearth.org.in/blog/climate-change/a-tonne-of-fossil-carbon-isn-t-the-same-as-a-tonne-of-new-trees-why-offsets-can-t-save-us-88168" class="a-dec">Read more</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://cdn.downtoearth.org.in/library/large/2023-03-10/0.34950300_1678429037_istock-1129628379.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Africa health security at risk; NCDs, climate change top causes</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.<br/>
+        Health experts have warned that the increase of non-communicable diseases (NCD) and the effects of climate change are threatening health security in Africa. This was discussed during the four-day Africa Health Agenda International Conference (AHAIC) that concluded March 8, 2023 in Kigali.<br/>
+          <a href="https://www.downtoearth.org.in/news/africa/africa-health-security-at-risk-ncds-climate-change-top-causes-88162" class="a-dec">Read more</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://img.etimg.com/thumb/msid-98491402,width-300,height-225,imgsize-416006,,resizemode-75/climate-change-food-system.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Why climate change is the greatest threat to human progress</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. <br/>
+          <a href="https://economictimes.indiatimes.com/small-biz/trade/exports/insights/why-climate-change-is-the-greatest-threat-to-human-progress/articleshow/98491302.cms" class="a-dec">Read more</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+<!--   weather analysis graph of weather website -->
+<div class="time_line_section" id="time_line">
+  
+  <h1 class="weather_analyisis">Weather Analysis</h1>
+  
+  <div class="time_line_section_video">
+        
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AuwOwqzT6rk?start=41" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="y-video"></iframe>
+     
+      
+       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_C2EeptHCY8?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="y-video"></iframe>
+     
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-NZIvvhGlR0?start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="y-video"></iframe>
+      
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OMXqsJ-aojc?start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="y-video"></iframe>
+
+    
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/LwRTw_7NNJs?start=30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="y-video"></iframe>
+  </div>
+</div>
+<!--   How to stop climate change -->
+  <h2 class="contant-center" id="how_to">How to stop climate change</h2>
+  <div class="group_botton">
+  <p>
+  <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample-1" aria-expanded="false" aria-controls="collapseWidthExample">
+    Reduce Carbon Emissions
+  </button>
+</p>
+<div style="min-height: 20px;">
+  <div class="collapse collapse-horizontal" id="collapseWidthExample-1">
+    <div class="card card-body" style="min-width: 80px;max-width:500px ;">
+       Carbon emissions are one of the leading causes of climate change. Individuals and organizations can reduce their carbon footprint by using renewable energy sources such as solar, wind or hydro power, and by increasing energy efficiency measures.
+    </div>
+  </div>
+</div>
+  <p>
+  <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample-2" aria-expanded="false" aria-controls="collapseWidthExample">
+    Promote Green Transportation
+  </button>
+</p>
+<div style="min-height: 20px;">
+  <div class="collapse collapse-horizontal" id="collapseWidthExample-2">
+    <div class="card card-body" style="min-width: 80px;max-width:500px ;">
+       Transportation is another significant contributor to climate change. Switching to low-carbon transportation options such as cycling, walking, or electric vehicles can help reduce emissions.
+    </div>
+  </div>
+</div>
+  <p>
+  <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample-3" aria-expanded="false" aria-controls="collapseWidthExample">
+    Support Conservation Efforts
+  </button>
+</p>
+<div style="min-height: 20px;">
+  <div class="collapse collapse-horizontal" id="collapseWidthExample-3">
+    <div class="card card-body" style="min-width: 80px;max-width:500px ;">
+       Forests, wetlands, and other natural ecosystems are crucial for regulating the Earth's climate. Supporting conservation efforts and reducing deforestation can help protect these vital ecosystems and prevent further climate change.
+    </div>
+  </div>
+</div>
+  <p>
+  <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample-4" aria-expanded="false" aria-controls="collapseWidthExample">
+    Reduce Waste
+  </button>
+</p>
+<div style="min-height: 20px;">
+  <div class="collapse collapse-horizontal" id="collapseWidthExample-4">
+    <div class="card card-body" style="min-width: 80px;max-width:500px ;;">
+       Landfills are a significant source of greenhouse gas emissions. Reducing waste through recycling and composting can help reduce these emissions.
+    </div>
+  </div>
+</div>
+  <p>
+  <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample-5" aria-expanded="false" aria-controls="collapseWidthExample">
+    Advocate For Climate Policies
+  </button>
+</p>
+<div style="min-height: 20px;">
+  <div class="collapse collapse-horizontal" id="collapseWidthExample-5">
+    <div class="card card-body" style="min-width: 80px;max-width:500px ;">
+       Governments and policymakers can play a critical role in addressing climate change by implementing policies that reduce carbon emissions and promote renewable energy.
+    </div>
+  </div>
+</div>
+  <p>
+  <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample-6" aria-expanded="false" aria-controls="collapseWidthExample">
+    Educate Others
+  </button>
+</p>
+<div style="min-height: 20px;">
+  <div class="collapse collapse-horizontal" id="collapseWidthExample-6">
+    <div class="card card-body" style="min-width: 80px;max-width:500px ;">
+       Raising awareness and educating others about climate change can help promote individual and collective action to address the issue.
+    </div>
+  </div>
+</div>
+  </div>
+
+<!--  Follow us -->
+  <h3 class="follow_us_head">Follow Us</h3>
+
+<div class="follow_us_section "id="follow_us">
+ <a href="https://instagram.com/asif0484_?igshid=N2JhNDIwYjc="> <img src="https://cdn-icons-png.flaticon.com/512/3670/3670125.png"class="logo_img"></a>
+  <a href="https://www.linkedin.com/in/asif-ekhlaque-90b710252">
+ <a href=""> <img src="https://cdn-icons-png.flaticon.com/512/1377/1377213.png"class="logo_img"></a>
+  <img src="https://cdn-icons-png.flaticon.com/512/3670/3670209.png"class="logo_img">
+<a href="https://twitter.com/asif0484?s=09">
+  <img src="https://cdn-icons-png.flaticon.com/512/3670/3670127.png"class="logo_img">
+</a>
+</div>
+  <div class="discription_main">
+   
+  </div>
+<!-- Footer of Website -->
+  <footer class="footer_desc">@Climate Action<br/> GDSC IIBM Patna <br/>
+    Developed by: Asif Ekhlaque<br/>
+    BCA 2nd semester<br>
+    Indian Institute Of Business Management,Patna<br>
+     <p>This website made for Avaring people about the effect of climate change. And how you are going to stop this.</p>
+    #solution-challange
+    #GDSC-Group
+    #GDG-Patna
+  </footer>
+  <script src="script.js">
+  </script>
+</body>
+</html>
