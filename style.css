@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+.nav-logo{
+  height: 50px;
+  margin-right: 5px;
+}
+.dark-mode{
+  background-color:black;
+  color:#004cff;
+}
+.Search_bar_body{
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    margin-top: 30px;
+}
+.carousel_climate_change{
+  margin-top: 60px;
+  margin: 30px;
+}
+.newcc_contant{
+  margin: 30px;
+}
+.a-dec{
+  text-decoration: none;
+}
+.group_botton{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.contant-center{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Merriweather', serif;
+  background-color: black;
+  color: white;
+  padding: 30px;
+  font-weight: bolder;
+  transition: 1s;
+}
+.contant-center:hover{
+  background-image: linear-gradient(to bottom right, red, yellow, #00ffd5);
+  color: black;
+}
+.footer_desc{
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: #000;
+  color: white;
+}
+/* Time line css */
+.time_line_image_contant{
+  width: 650px;
+  height: 300px;
+}
+.time_line_section_video{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+#y-video{
+  margin: 20px;
+}
+.follow_us_section{
+ 
+  text-align: center;
+  margin: 20px;
+}
+.logo_img{
+  width: 50px;
+  margin: 10px;
+  transition: 1s;
+}
+.logo_img:hover{
+  width: 70px;
+}
+.follow_us_head{
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  color: white;
+  background-color: black;
+  padding: 20px;
+  transition: 1s;
+}
+.follow_us_head:hover{
+ background-image: linear-gradient(to bottom right, red, yellow, #00ffd5);
+  color: black;
+}
+.weather_analyisis{
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  color: white;
+  background-color: black;
+  width: 100%;
+  padding: 20px;
+  transition: 1s;
+}
+.weather_analyisis:hover{
+  background-image: linear-gradient(to bottom right, red, yellow, #00ffd5);
+  color: black;
+}
+
+.nav_main:hover{
+  background-image: linear-gradient(to bottom right, red, yellow, #00ffd5);
+  color: black;
+}
