@@ -4,7 +4,7 @@
 Hosting link: https://asifekhlaque.github.io/solutionchallage2023-climat-action-/
 
 # Weather Application
-
+This problem statement is from sustainable development goal.
 This is a weather application webpage built using HTML, CSS, and JavaScript. The webpage allows users to search for weather information by entering the name of a city or location. The application fetches weather data from the OpenWeatherMap API and displays the weather details on the page.
 
 ## Table of Contents
